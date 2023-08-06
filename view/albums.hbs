@@ -1,0 +1,18 @@
+<style>
+  body { 
+    background-image: url('/images/spotify-logo-neon-with-space-text-graphics-green-background_494516-186.webp');
+    background-repeat: no-repeat; 
+    background-size: cover; }
+</style>
+
+<h1>Albums results:</h1>
+
+<div class="albums">
+  {{#each albums}}
+    <div class="album">
+      <img width="200px" src="{{this.images.0.url}}" alt="{{this.name}}" />
+      <h2>{{this.name}}</h2>
+      <a href="/albums/{{this.id}}/tracks">Show tracks</a>
+    </div>
+  {{/each}}
+</div>
