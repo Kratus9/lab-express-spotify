@@ -1,0 +1,20 @@
+<style>
+  body { 
+    background-image: url('images/logotipo-spotify-neon-espacio-texto-graficos-fondo-verde_494516-186.avif');
+    background-repeat: no-repeat; 
+    background-size: cover; }
+</style>
+<a href="/">Home</a>
+{{!-- <a href="/artist-search">Atrás</a> --}}
+
+<h1>Albums results: {{this.artist}}</h1>
+
+<div class="albums">
+  {{#each albums}}
+    <div class="album">
+      <h2>{{this.name}}</h2>
+      <img width="200px" src="{{this.images.0.url}}" alt="{{this.name}}" />
+      <a href="/albums/{{this.id}}/tracks">View tracks</a>
+    </div>
+  {{/each}}
+</div>
