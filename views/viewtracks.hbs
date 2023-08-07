@@ -1,22 +1,24 @@
-<style>
+<div class="cuerpo">
+  <a href="/">Home</a>
+  {{! <a href="/albums/:artistId">Atrás</a> }}
+
+  <h1>Track list: {{this.albums}} </h1>
+
+  <div class="tracks">
+    {{#each tracks}}
+      <div class="track">
+        <h2>{{this.name}}</h2>
+        <audio controls>
+          <source src="{{this.preview_url}}" type="audio/mpeg" />
+          Your browser does not support the audio tag.
+        </audio>
+      </div>
+    {{/each}}
+  </div>
+</div>
+{{! <style>
   body { 
     background-image: url('images/logotipo-spotify-neon-espacio-texto-graficos-fondo-verde_494516-186.avif');
     background-repeat: no-repeat; 
     background-size: cover; }
-</style>
-<a href="/">Home</a>
-{{!-- <a href="/albums/:artistId">Atrás</a> --}}
-
-<h1>Track list: {{this.albums}} </h1>
-
-<div class="tracks">
-  {{#each tracks}}
-    <div class="track">
-      <h2>{{this.name}}</h2>
-      <audio controls>
-        <source src="{{this.preview_url}}" type="audio/mpeg" />
-        Your browser does not support the audio tag.
-      </audio>
-    </div>
-  {{/each}}
-</div>
+</style> }}
